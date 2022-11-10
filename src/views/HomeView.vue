@@ -1,7 +1,7 @@
 <template>
   <HomepageHeader />
   <div class="home">
-    <h2>Top 250 Films!</h2>
+    <h1>Top 250 Films!</h1>
     <MoviesList />
   </div>
 </template>

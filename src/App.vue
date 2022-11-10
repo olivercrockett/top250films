@@ -5,6 +5,7 @@
 <style>
 body {
   background-color: #000000;
+  overflow-x: hidden;
 }
 
 #app {

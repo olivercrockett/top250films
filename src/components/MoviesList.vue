@@ -89,15 +89,15 @@ export default {
   position: fixed;
   display: block;
   top: 50px;
-  left: 0;
+  right: 0;
   width: 3vw;
   max-width: 20px;
   height: 500px;
-  background: repeating-linear-gradient(0deg,
-      #555555,
-      #ffffff 1px,
-      #ffffff 5px,
-      #555555 5px);
+  background-image: url('https://assets.codepen.io/6636213/film.png');
+  background-repeat: repeat-y;
+  background-position: top;
+  background-size: 40px 100px;
+  background-color: white;
   z-index: 3;
   cursor: pointer;
 }
@@ -105,7 +105,7 @@ export default {
 #slider {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 3vw;
   max-width: 20px;
   height: 5px;

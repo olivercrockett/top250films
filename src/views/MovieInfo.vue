@@ -137,6 +137,7 @@ svg {
 
 #details img {
     max-width: 400px;
+    max-height: 40vh    ;
     position: relative;
     top: 30px;
     left: 0px;
@@ -150,6 +151,11 @@ svg {
 
     #movieInfo {
         flex-direction: column-reverse;
+    }
+
+    #details img {
+        max-width: 90vw;
+        max-height: 350px;
     }
 }
 </style>

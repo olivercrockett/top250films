@@ -6,7 +6,10 @@
             <img v-bind:src="movie.image" />
             <h4>{{ movie.title }}</h4>
             <p>{{ movie.plot }}</p>
-            <iframe v-bind:src="movie.trailer + '?autoplay=false&width=240'" height="180" width="300"></iframe>
+            <iframe v-if="movie.trailer" v-bind:src="movie.trailer + '?autoplay=false&width=240'" height="180" width="300"></iframe>
+            <div v-else id="noTrailer">
+                <p>No trailer available</p>
+            </div>
         </div>
     </div>
     <a v-if="this.banner == false" @click="toggleBanner" id="bannerToggleCollapsed">▼</a>
@@ -89,7 +92,7 @@ export default {
     box-sizing: border-box;
     text-align: center;
     border-radius: 0 10px 0 0;
-    z-index: 6;
+    z-index: 2;
     color: white;
     cursor: pointer;
 }
@@ -117,6 +120,18 @@ iframe {
     right: 5vw;
 }
 
+#noTrailer {
+    height: 180px;
+    position: absolute;
+    top: 60px;
+    right: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #222222;
+}
+
 h4,
 p {
     position: absolute;
@@ -129,7 +144,7 @@ p {
 }
 
 p {
-    max-height: 100px;
+    height: 100px;
     top: 160px;
 }
 
@@ -145,6 +160,7 @@ p {
 
     img,
     iframe,
+    #noTrailer,
     h4,
     p {
         position: relative;
@@ -171,6 +187,11 @@ p {
     iframe {
         right: 0;
         top: -50px;
+    }
+
+    #noTrailer {
+        top: -50px;
+        right: 0;
     }
 }
 </style>
