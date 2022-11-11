@@ -45,6 +45,9 @@ export default {
                 this.movie.imageOne = data.items[0].image;
                 this.movie.imageTwo = data.items[1].image;
                 this.movie.imageThree = data.items[2].image;
+            }).catch(err => {
+                console.log(err);
+                this.$router.push({ name: 'home' });
             })
         fetch(`https://imdb-api.com/en/API/FullCast/pk_tkset0jkjlt6y6xiz/${this.movie.id}`)
             .then(response => response.json())

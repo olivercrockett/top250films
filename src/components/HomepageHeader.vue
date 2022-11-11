@@ -136,7 +136,7 @@ h4,
 p {
     position: absolute;
     top: 50px;
-    left: calc(5vw + 180px);
+    left: 240px;
     width: calc(80vw - 450px);
     max-width: 350px;
     max-height: 50px;
